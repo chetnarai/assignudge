@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Teacher Dashboard </title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Teacher Dashboard</h1>
+        <h3>Welcome, <span id="teacherName"></span>!</h3>
+
+        <div class="teacher-main-sections">
+            <section id="uploadAssignmentSection">
+                <h2>Upload Assignment</h2>
+                <form id="uploadAssignmentForm" enctype="multipart/form-data">
+                    <label>
+                        Subject:
+                        <select id="subjectSelect" required>
+                            <option value="" disabled selected>Select subject</option>
+                            <option value="NSC">Network Security and cryptography</option>
+                            <option value="Java">Advaced Java Programming</option>
+                            <option value="SPM">Software project management</option>
+                            <option value="UHV">Universal Human Values </option>
+                            <option value="ITC">Information Theory and coding</option>
+                            <option value="PME">Principle of management for engineers</option>
+                        </select>
+                    </label>
+                    <label>
+                        Assignment Number:
+                        <input type="text" id="assignmentTitle" placeholder="Enter assignment number" required />
+                    </label>
+                    <label>
+                        Deadline:
+                        <input type="date" id="deadline" required />
+                    </label>
+                    <label>
+                        Assignment File:
+                        <input type="file" id="assignmentFile" required />
+                    </label>
+                    <button type="submit">Upload Assignment</button>
+                </form>
+            </section>
+
+            <section id="assignmentsListSection">
+                <h2>Assignments</h2>
+                <div id="assignmentsList"></div>
+            </section>
+        </div>
+
+        <section id="submissionsSection">
+            <h2>Student Submissions</h2>
+            <div id="submissionsList"></div>
+        </section>
+    </div>
+
+    <script src="teacher.js"></script>
+</body>
+</html>

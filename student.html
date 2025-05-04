@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Student Dashboard </title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Student Dashboard</h1>
+        <h3>Welcome, <span id="studentName"></span>!</h3>
+
+        <section id="assignmentsSection">
+            <h2>Assignments</h2>
+            <div id="assignmentsList"></div>
+        </section>
+
+        <section id="submitAssignmentSection" style="display:none;">
+            <h2>Submit Assignment</h2>
+            <form id="submitAssignmentForm" enctype="multipart/form-data">
+                <p><strong>Assignment:</strong> <span id="currentAssignmentTitle"></span></p>
+                <label>
+                    Submission File:
+                    <input type="file" id="submissionFile" required />
+                </label>
+                <button type="submit">Submit</button>
+                <button type="button" id="cancelSubmitBtn">Cancel</button>
+            </form>
+        </section>
+
+        <section id="gradesSection">
+            <h2>Your Grades</h2>
+            <div id="gradesList"></div>
+        </section>
+    </div>
+
+    <script src="student.js"></script>
+</body>
+</html>
